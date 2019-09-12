@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "flussi.collections[farmaci]",
+    "type": "java.lang.String",
+    "description": "A description for 'flussi.collections[farmaci]'"
+  },
+  {
+    "name": "flussi.collections[aziende]",
+    "type": "java.lang.String",
+    "description": "A description for 'flussi.collections[aziende]'"
+  }
+]}
