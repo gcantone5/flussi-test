@@ -11,4 +11,8 @@ public interface FlussiService {
 
 	BasicDBObject insertElement(String nomeFlusso, HashMap<String, Object> params);
 
+	List<BasicDBObject> readExport(String nomeFlusso, String fileName);
+	
+	BasicDBObject readWork(String nomeFlusso, String fileName);
+
 }
