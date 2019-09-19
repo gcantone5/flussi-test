@@ -14,8 +14,6 @@ public class ConfigProperties {
 	@Bean(name = "collectionsMapping")
 	public Map<String, String> collections() {
 		Map<String, String> collections =  new HashMap<String, String>();
-		collections.put("farmaci", "flusso_farmaci");
-		collections.put("aziende", "flusso_aziende");
 		collections.put("tesserasanit", "tesserasanit");
 		collections.put("fattelettron", "fattelettron");
 		return collections;
