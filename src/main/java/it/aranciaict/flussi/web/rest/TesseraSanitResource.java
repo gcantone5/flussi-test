@@ -52,8 +52,8 @@ public class TesseraSanitResource {
 	@GetMapping("/flusso/{flussoId}")
 	public ResponseEntity<List<TesseraSanitDTO>> findAllByFlussoId(@PathVariable String flussoId) {
 		log.debug("get all tesserasanit KO");
-		List<TesseraSanitDTO> allTesseraSanitKO = tesseraSanitService.getAllTesseraSanitKO();
-		return ResponseEntity.ok(allTesseraSanitKO);
+		List<TesseraSanitDTO> allTesseraSanit = tesseraSanitService.getAllByFlussoId(flussoId);
+		return ResponseEntity.ok(allTesseraSanit);
 	}
 
 }

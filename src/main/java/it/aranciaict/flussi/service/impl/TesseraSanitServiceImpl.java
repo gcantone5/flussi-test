@@ -9,6 +9,7 @@ import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.FindAndModifyOptions;
 import org.springframework.data.mongodb.core.MongoOperations;
@@ -82,10 +83,9 @@ public class TesseraSanitServiceImpl implements TesseraSanitService {
 	
 
 	@Override
-	public List<TesseraSanitDTO> getAllByFlusso(String flussoId) {
+	public List<TesseraSanitDTO> getAllByFlussoId(String flussoId) {
 		log.debug("TesseraSanitService - getAllByFlusso");
-//		Flusso flusso = flussoRepository.findOneByNameEquals(nomeflusso).get();
-		List<TesseraSanit> findAllByFlussoIdEquals = tesseraSanitRepository.findAllByFlussoIdEquals(flussoId);
+		List<TesseraSanit> findAllByFlussoIdEquals = tesseraSanitRepository.findAllByFlussoIdEquals(new ObjectId(flussoId));
 		return findAllByFlussoIdEquals.stream().map(tesseraSanitMapper::toDto)
 				.collect(Collectors.toList());
 	}

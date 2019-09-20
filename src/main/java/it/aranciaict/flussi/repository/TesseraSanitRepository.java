@@ -2,6 +2,7 @@ package it.aranciaict.flussi.repository;
 
 import java.util.List;
 
+import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 
@@ -14,6 +15,6 @@ public interface TesseraSanitRepository extends MongoRepository<TesseraSanit, St
 	@Query("{ 'qa' : { $exists: true, $ne: [] } }")
 	List<TesseraSanit> findAllWithQa();
 	
-	List<TesseraSanit> findAllByFlussoIdEquals(String flussoId);
+	List<TesseraSanit> findAllByFlussoIdEquals(ObjectId flussoId);
 	
 }

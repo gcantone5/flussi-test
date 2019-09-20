@@ -14,6 +14,6 @@ public interface TesseraSanitService {
 
 	List<TesseraSanitDTO> getAllTesseraSanitKO();
 
-	List<TesseraSanitDTO> getAllByFlusso(String nomeflusso);
+	List<TesseraSanitDTO> getAllByFlussoId(String flussoId);
 	
 }

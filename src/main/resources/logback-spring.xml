@@ -42,7 +42,6 @@
  	<logger name="org.springframework.data" level="DEBUG" />
 	<logger name="org.springframework.data.mongodb.core" level="TRACE" />
 	<logger name="org.mongodb.driver" level="DEBUG" />
-	
     
  
 </configuration>
